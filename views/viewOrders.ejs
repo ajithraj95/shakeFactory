@@ -1,0 +1,44 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <h2>List of Orders:</h2>
+    <section>
+       <table>
+           <thead>
+               <tr>
+                    <th>Customer Name</th>
+                    <th>Customer Number</th>
+                    <th>Blizzards</th>
+                    <th>Sundaes</th>
+                    <th>Shakes</th>
+                    <th>Sub Total</th>
+                    <th>Tax</th>
+                    <th>Total</th>
+                    <th>Manage</th>               
+                </tr>
+           </thead>
+           <tbody>
+                <%
+                    for(var order of orders){
+                        %>
+                            <tr>
+                                <td><%= order.customerName %></td>
+                                <td><%= order.customerNumber %></td> 
+                                <td><%= order.blizzards %></td> 
+                                <td><%= order.sundaes %></td>
+                                <td><%= order.shakes %></td>
+                                <td>$<%= order.subTotal.toFixed(2) %></td>
+                                <td>$<%= order.tax.toFixed(2) %></td>
+                                <td>$<%= order.total.toFixed(2) %></td>
+                                <td><a class="tabledata" href="<%= order.deleteLink %>">Delete</a></td>
+                           </tr>
+                        <%
+                    }
+                %>
+           </tbody>
+       </table>
+    </section>
+</body>
+<%- include('layouts/footer'); -%>
+
+

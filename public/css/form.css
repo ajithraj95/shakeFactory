@@ -1,0 +1,162 @@
+body{
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    width: 960px;
+    margin: 50px auto;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+
+h1 {
+    border:white solid 2px;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    color:white;
+    text-align: center;
+}
+.w50{
+    width: 48%;
+    float: left;
+    margin: 1%;
+}
+.clear{
+    clear: both;
+}
+#errors{
+    color: black;
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 26px;
+    font-weight: bolder;
+    line-height: 34px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+
+}
+form, .formData{
+    width: 380px;
+    text-align: center;
+    border: 3px solid white;
+    box-shadow: 0 0 10px whitesmoke;
+    padding: 30px;
+    margin: 50px auto;
+    color: white;
+    background-color: rgb(143, 90, 73);
+    border-radius: 20px;
+}
+label{
+    width: 170px;
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+}
+input:not([type="radio"]), select{
+    font-size: 16px;
+    font-family: 'Kalam', cursive;
+    padding: 5px 10px;
+}
+input:not([type="radio"]){
+    width: 170px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.linkback, input[type="submit"]{
+    width: 100%;
+    font-size: 22px;
+    background-color: rgb(73, 28, 14);
+    color: white;
+    font-family: 'Kalam', cursive;
+    border: 0px;
+    padding: 10px;
+    height: 50px;
+    box-shadow: 4px 4px 0px rgb(49, 19, 9);
+    border-radius: 8px;
+}
+input[type="submit"]:active{
+    box-shadow: -4px -4px 0px rgb(53, 21, 10);
+}
+
+.linkback {
+    margin-left: 17em;
+}
+
+.top_menu{
+    background-color: rgb(53, 21, 10);
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    color: white;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+.top_menu ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+.top_menu ul li{
+    display: inline-block;
+    width: 130px;
+}
+
+.top_menu ul li:hover{
+    background-color: rgb(143, 90, 73);
+}
+.top_menu ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+table{
+    border: 2px solid rgb(53, 21, 10);
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: white;
+}
+
+td, .tabledata{
+    background-color:white;
+    border: 2px solid rgb(53, 21, 10);
+    padding: 12px 15px;
+    color: black;
+}
+
+th{
+    border: 2px solid rgb(53, 21, 10);
+    padding: 12px 15px;
+    font-weight: bold;
+    background-color: rgb(143, 90, 73);
+    color: white;
+    text-align: center;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    box-shadow: 0 0 10px whitesmoke;
+    color: white;
+    border-radius: 20px;
+    background-color: rgb(53, 21, 10);
+}
+
+#footer p {
+padding-left: 10px;
+font-weight: bold;
+}
+
+h4 {
+    text-align: center;
+    border:black solid 2px;
+}

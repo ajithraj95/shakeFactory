@@ -1,0 +1,23 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section>
+        <form name="myform" method="Post" action="">
+            <label>Username</label>
+            <input placeholder="First Last" type="text" name="username"><br />
+            <label>Password</label>
+            <input type="password" name="password"><br />
+            <input type="submit" value="Login">
+            <p id="logInerror">
+                <%
+                    if(typeof message !== 'undefined'){
+                        %>
+                            <%=message%>
+                        <%
+                    }
+                %>
+            </p>
+        </form>
+    </section>
+</body>
+<%- include('layouts/footer'); -%>

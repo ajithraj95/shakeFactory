@@ -1,0 +1,83 @@
+<%- include('layouts/header'); -%>
+
+  <body>
+    <%- include('layouts/nav'); -%>
+      <section class="w50">
+        <form name="products" method="Post" onsubmit="return formSubmit();" action="">
+          <label>Name</label>
+          <input id="name" placeholder="Your Name" type="text" name="name"><br />
+          <label>Phone</label>
+          <input id="phone" placeholder="00-xx-000" type="phone" name="phone"><br />
+          <label>Chocolate Blizzard</label>
+          <input id="blizzard" placeholder="0" type="text" name="blizzard"><br />
+          <label>Strawberry Sundae</label>
+          <input id="sundae" placeholder="0" type="text" name="sundae"><br />
+          <label>Blueberry Shake</label>
+          <input id="shake" placeholder="0" type="text" name="shake"><br />
+          <p></p>
+          <br/>   
+          <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section class="w50">
+        <div class="formData">
+          <% if(typeof(errors) !='undefined' ){ for(var error of errors){ %>
+            <p class="errors">
+              <%= error.msg%>
+            </p>
+            <% } } if(typeof(total) !='undefined' ){ %>
+              <p id="formResult">Your Receipt:</p>
+              <table>
+                <tr>
+                  <th>Name: </th>
+                  <td>
+                    <%= customerName %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Phone: </th>
+                  <td>
+                    <%= customerNumber %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Chocolate Blizzards (<%=blizzards%>): </th>
+                  <td>$
+                    <%= blizzardTotal.toFixed(2) %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Strawberry Sundaes (<%=sundaes%>): </th>
+                  <td>$
+                    <%= sundaeTotal.toFixed(2) %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Blueberry Shakes (<%=shakes%>): </th>
+                  <td>$
+                    <%= shakeTotal.toFixed(2) %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Subtotal: </th>
+                  <td>$<%= subTotal.toFixed(2) %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Tax( <%= taxPercent %>% ): </th>
+                  <td>$<%= tax.toFixed(2) %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Total: </th>
+                  <td>$<%= total.toFixed(2) %>
+                  </td>
+                </tr>
+              </table>
+              <% } %>
+
+        </div>
+      </section>
+      <div class="clear"></div>
+  </body>
+  <%- include('layouts/footer'); -%>
